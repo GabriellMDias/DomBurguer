@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dom burguer </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="imagens/Logo.png" class="rounded mx-auto d-block" width="20%" alt="Dom Burguer">
+        <div class="container">
+            <div class="row">
+              
+              <div class="col-sm">
+                <button type="button" class="btn btn-outline-danger" id="btnInicio" onclick="Inicio()"><img src="icones/house.png" class="icones">  <strong>INÍCIO</strong></button>
+              </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-outline-danger" id="btnCardapio" onclick="Cardapio()"><img src="icones/book.png" class="icones"> <strong>CARDÁPIO</strong></button>
+              </div>
+              <div class="col-sm">
+                <button type="button" class="btn btn-outline-danger" id="btnLocal" onclick="Local()"><img src="icones/envelope.png" class="icones"> <strong>CONTATO</strong></button>
+              </div>
+              
+            </div>
+          </div>
+          <p style="border-top: solid black 0px;"></p>
+          <p style="border-top: solid rgb(153, 2, 2) 5px;"></p>
+          <p style="border-top: solid black 1px;"></p>
+    </header>
+
+
+    <div style="background-image: linear-gradient(white,black);">
+      <div class="container" id="idInicio">
+        <div class="slideshow-container">
+          <div class="mySlides1">
+            <img src="imagens/Img1.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides1">
+            <img src="imagens/Img2.png" style="width:100%">
+          </div>
+        
+          <div class="mySlides1">
+            <img src="imagens/Img3.png" style="width:100%">
+          </div>
+        
+          <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+        <br>
+        
+      </div>
+      
+      <div class="container" id="idCardapio">
+        <table class="table table-bordered table-dark" style="border: black solid 5px;">
+          <tbody>
+            <tr>
+              <th colspan="4" style="text-align: center;" class="texto">Cardápio</th>
+            </tr>
+            <tr>
+              <td><img src="imagens/C1.png" width="110px"></td>
+              <td colspan="2" class="texto">Dom Juan - Pão brioche selado na chapa, 1 smash burguer 100g, cheddar, alface, tomate e molho especial</td>
+              <td class="texto">R$ 15,90</td>
+            </tr>
+            <tr>
+              <td><img src="imagens/C2.png" width="110px"></td>
+              <td colspan="2" class="texto">Dom Quixote - Pão brioche selado na chapa, 2 smash burguer 80g, cheddar, bacon, cebola caramelizada e molho especial</td>
+              <td class="texto">R$ 17,90</td>
+            </tr>
+            <tr>
+              <td><img src="imagens/C3.png" width="110px"></td>
+              <td colspan="2" class="texto">Dom Casmurro - Pão brioche selado na chapa, 1 smash burguer 120g, cheddar, cebola caramelizada, alface, tomate e molho especial</td>
+              <td class="texto">R$ 19,90</td>
+            </tr>
+            <tr>
+              <td><img src="imagens/C4.png" width="110px"></td>
+              <td colspan="2" class="texto">Dom Barão - Pão brioche selado na chapa, 1 smash burguer 150g, cheddar, bacon, cebola onion rings, alface, tomate e molho especial</td>
+              <td class="texto">R$ 21,90</td>
+            </tr>
+            <tr>
+              <td><img src="imagens/C5.png" width="110px"></td>
+              <td colspan="2" class="texto">Dom Cherry - Pão brioche selado na chapa, 3 smash burguer 100g, cheddar, bacon, salada especial e molho especial</td>
+              <td class="texto">R$ 23,90</td>
+            </tr>
+            <tr>
+              <th colspan="4" style="text-align: center;" class="texto">Porções</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="texto">Calabresa com cebola</td>
+              <td class="texto">R$ 10,00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="texto">Batata com cheddar e bacon</td>
+              <td class="texto">R$ 12,00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th colspan="4" style="text-align: center;" class="texto">Bebidas</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="texto">Coca 350ml</td>
+              <td class="texto">R$ 5,00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="texto">Fanta 350ml</td>
+              <td class="texto">R$ 5,00</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+
+      
+      <div class="container" id="idContato" >
+          <div class="container-fluid" style="background-color: rgb(52, 58, 64);border: black solid 5px; border-radius: 5px;">
+            <br>
+            <p class="texto">Telefone para contato: 15 99192-1429</p>
+            <p class="texto">E-mail: domburguernabrasa@gmail.com</p>
+            <p class="texto">Horário de funcionamento: De Quinta-feira a Domingo das 19:00 às 23:00</p>
+            <br>
+            <p class="texto"><img src="icones/placeholder.png" style="width: 30px;">Localização: </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d914.6625106063536!2d-47.4388219!3d-23.5091114!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf6026948e18f7%3A0x5bb847a27a6642c8!2sR.%20Cel.%20Nogueira%20Padilha%2C%20Sorocaba%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1606252577941!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <br>
+       </div>
+    </div> 
+    
+      
+    <footer class="container-fluid" style="border-top: rgb(153, 2, 2) solid 5px;background-color: black;">
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <p class="texto"> Mídias Sociais: 
+            <a href="https://www.facebook.com/domburguernabrasa/?ref=page_internal" target="_blank" style="margin-right: 10px;"><img src="icones/facebook.png" height="32px"></a>
+            <a href="https://www.instagram.com/domburguernabrasa/?hl=pt-br" target="_blank" style="margin-right: 10px;"><img src="icones/instagram.png" height="32px"></a>
+            <a href="https://api.whatsapp.com/send?phone=+5515991921429&%20" target="_blank"><img src="icones/whatsapp.png" height="32px"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+    </footer>
+
+    <script src="script.js"></script>
+  
+</body>
+</html>
+
